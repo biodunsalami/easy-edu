@@ -15,7 +15,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/easy_edu_logo_blue_text"
             android:layout_marginTop="150dp"
-            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:contentDescription="@string/app_logo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -24,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/reading_bg"
+            android:contentDescription="@string/background_image_of_a_person_studying"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -51,16 +53,15 @@
             android:layout_marginHorizontal="24dp"
             android:paddingVertical="12dp"
             app:cornerRadius="7dp"
-            android:text="I already have an account"
+            android:text="@string/i_already_have_an_account"
             android:textAllCaps="false"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:fontFamily="@font/notosans_regular"
             android:backgroundTint="@color/pastel_blue"
             android:textColor="@color/light_blue"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/get_started_button"/>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

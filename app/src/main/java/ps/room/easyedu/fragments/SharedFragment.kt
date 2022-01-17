@@ -15,5 +15,9 @@ open class SharedFragment : Fragment() {
         return activity as MainActivity
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
 
 }

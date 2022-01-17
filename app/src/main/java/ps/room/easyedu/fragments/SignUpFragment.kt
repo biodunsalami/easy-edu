@@ -27,7 +27,7 @@ class SignUpFragment : SharedFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.signUpButton.setOnClickListener {
-//            activityCast().changeActivityFragment(SignUpFragmentd
+            activityCast().changeActivityFragment(SignUpFragmentDirections.actionSignUpFragmentToSignInFragment())
         }
     }
 
