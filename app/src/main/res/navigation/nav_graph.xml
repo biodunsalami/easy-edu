@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenTwoFragment">
+
+    <fragment
+        android:id="@+id/splashScreenOneFragment"
+        android:name="ps.room.easyedu.fragments.SplashScreenOneFragment"
+        android:label="SplashScreenOneFragment"
+        tools:layout="@layout/fragment_splash_screen_one">
+        <action
+            android:id="@+id/action_splashScreenOneFragment_to_splashScreenTwoFragment"
+            app:destination="@id/splashScreenTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenTwoFragment"
+        android:name="ps.room.easyedu.fragments.SplashScreenTwoFragment"
+        android:label="fragment_splash_screen_two"
+        tools:layout="@layout/fragment_splash_screen_two" >
+        <action
+            android:id="@+id/action_splashScreenTwoFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_splashScreenTwoFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="ps.room.easyedu.fragments.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_splashScreenTwoFragment"
+            app:destination="@id/splashScreenTwoFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="ps.room.easyedu.fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_splashScreenTwoFragment"
+            app:destination="@id/splashScreenTwoFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="ps.room.easyedu.fragments.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="ps.room.easyedu.fragments.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_passwordSentFragment"
+            app:destination="@id/passwordSentFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/passwordSentFragment"
+        android:name="ps.room.easyedu.fragments.PasswordSentFragment"
+        android:label="fragment_password_sent"
+        tools:layout="@layout/fragment_password_sent" >
+        <action
+            android:id="@+id/action_passwordSentFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+</navigation>

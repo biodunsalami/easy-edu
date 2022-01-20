@@ -1,3 +1,44 @@
 <resources>
     <string name="app_name">EasyEdu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_logo">App logo</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="or_sign_up_with">-Or sign up with-</string>
+    <string name="or_sign_in_with">-Or sign in with-</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="get_started">Get Started</string>
+    <string name="facebook_icon">Facebook Icon</string>
+    <string name="google_icon">Google icon</string>
+    <string name="twitter_icon">Twitter Icon</string>
+    <string name="sign_in">Sign in</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="i_already_have_an_account">I already have an account</string>
+    <string name="background_image_of_a_person_studying">Background Image of a Person Studying</string>
+    <string name="search">Search</string>
+    <string name="design">Design</string>
+    <string name="courses">Courses</string>
+    <string name="see_all">See All</string>
+    <string name="course_image">Course Image</string>
+    <string name="star_icon">Star Icon</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="my_courses">My Courses</string>
+    <string name="you_have_not_started_any_courses">You have not started any courses</string>
+    <string name="no_courses_yet_background_image">No courses yet background image</string>
+    <string name="browse_through_courses_and_enroll_start_learning_today">Browse through courses and enroll.\n Start learning today.</string>
+    <string name="browse_courses">Browse Courses</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="you_have_not_downloaded_any_courses">You have not downloaded \n any courses</string>
+    <string name="download_your_favourite_courses_and_learn_anywhere">download your favourite courses and learn \n anywhere and anytime - downloaded \n courses will show up here.</string>
+    <string name="reset_password_sent">Your reset password has been sent to \n your email. You can sign in and \n change the password.</string>
+    <string name="download_a_course">Download a Course</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="mail_sent_icon">Mail Sent Icon</string>
+    <string name="back_to_sign_in">Back to Sign in</string>
+    <string name="password_sent">Password Sent</string>
 </resources>

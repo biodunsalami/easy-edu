@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/popular_course_image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/drone_image"
+                android:contentDescription="@string/course_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/course_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:text="Drone Photography"
+                android:fontFamily="@font/notosans_regular"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/popular_course_image_view"/>
+
+
+            <TextView
+                android:id="@+id/course_tutor_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="By Tolu Davies"
+                android:fontFamily="@font/notosans_regular"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/course_title_text_view"
+                app:layout_constraintStart_toEndOf="@+id/popular_course_image_view"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp"
+                android:layout_marginHorizontal="16dp"
+                app:layout_constraintStart_toEndOf="@+id/popular_course_image_view"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/star_image_view"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/star_rate_icon"
+                    android:contentDescription="@string/star_icon"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="4.5 (195k)"
+                    android:fontFamily="@font/notosans_regular"
+                    android:textSize="13sp"
+                    android:drawablePadding="4dp"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

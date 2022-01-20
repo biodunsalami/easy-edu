@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SplashScreenTwoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/easy_edu_logo_blue_text"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="24dp"
+            android:contentDescription="@string/app_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/reading_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reading_bg"
+            android:contentDescription="@string/background_image_of_a_person_studying"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/get_started_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:layout_marginTop="42dp"
+            app:cornerRadius="7dp"
+            android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/notosans_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reading_image"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/already_have_an_account_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:paddingVertical="12dp"
+            app:cornerRadius="7dp"
+            android:text="@string/i_already_have_an_account"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/notosans_regular"
+            android:backgroundTint="@color/pastel_blue"
+            android:textColor="@color/light_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/get_started_button"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
