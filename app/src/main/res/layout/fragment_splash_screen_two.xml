@@ -48,6 +48,7 @@
             app:layout_constraintTop_toBottomOf="@+id/reading_image"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/already_have_an_account_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"

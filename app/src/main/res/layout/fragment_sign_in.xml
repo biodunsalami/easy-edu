@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.SignInFragment">
 
 
@@ -12,17 +12,17 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/sign_up_text_view"
+            android:id="@+id/sign_in_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in"
-            android:fontFamily="@font/notosans_bold"
-            android:textSize="20sp"
-            android:textColor="@color/edu_black"
-            android:layout_marginTop="220dp"
             android:layout_marginStart="24dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:layout_marginTop="220dp"
+            android:fontFamily="@font/notosans_bold"
+            android:text="@string/sign_in"
+            android:textColor="@color/edu_black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <LinearLayout
@@ -30,48 +30,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:orientation="vertical"
             android:layout_marginTop="12dp"
-            app:layout_constraintTop_toBottomOf="@+id/sign_up_text_view"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_text_view">
 
 
             <EditText
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingVertical="16dp"
-                android:paddingHorizontal="12dp"
+                android:layout_marginVertical="8dp"
+                android:autofillHints="emailAddress"
                 android:background="@drawable/curved_rectangle_background"
                 android:ems="10"
-                android:autofillHints="emailAddress"
                 android:fontFamily="@font/notosans_regular"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:layout_marginVertical="8dp"
-                android:textColorHint="@color/grey"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="16dp"
                 android:textColor="@color/edu_black"
-                android:textSize="16sp"/>
+                android:textColorHint="@color/grey"
+                android:textSize="16sp" />
 
 
             <EditText
                 android:id="@+id/password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingVertical="16dp"
-                android:paddingHorizontal="12dp"
+                android:layout_marginVertical="8dp"
+                android:autofillHints="password"
                 android:background="@drawable/curved_rectangle_background"
                 android:ems="10"
                 android:fontFamily="@font/notosans_regular"
-                android:autofillHints="password"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:layout_marginVertical="8dp"
-                android:textColorHint="@color/grey"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="16dp"
                 android:textColor="@color/edu_black"
+                android:textColorHint="@color/grey"
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -80,80 +80,80 @@
             android:id="@+id/forgot_password_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/forgot_password"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:fontFamily="@font/notosans_regular"
+            android:text="@string/forgot_password"
             android:textColor="@color/edu_black"
             android:textSize="14sp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/sing_up_linear_layout"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sing_up_linear_layout" />
 
         <TextView
             android:id="@+id/or_sign_in_with_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/notosans_regular"
             android:text="@string/or_sign_in_with"
             android:textColor="@color/edu_black"
             android:textSize="14sp"
-            android:layout_marginTop="58dp"
-            android:fontFamily="@font/notosans_regular"
-            app:layout_constraintTop_toBottomOf="@+id/sing_up_linear_layout"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/sing_up_linear_layout" />
 
         <LinearLayout
             android:id="@+id/sign_up_linear_layout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/or_sign_in_with_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/or_sign_in_with_text_view">
 
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="7dp"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                app:cardCornerRadius="7dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
+                    android:layout_margin="8dp"
                     android:contentDescription="@string/google_icon"
-                    android:src="@drawable/google_logo"/>
+                    android:src="@drawable/google_logo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="7dp"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                app:cardCornerRadius="7dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="13dp"
+                    android:layout_margin="9dp"
                     android:contentDescription="@string/facebook_icon"
-                    android:src="@drawable/facebook_logo"/>
+                    android:src="@drawable/facebook_logo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="7dp"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                app:cardCornerRadius="7dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="14dp"
+                    android:layout_margin="10dp"
                     android:contentDescription="@string/twitter_icon"
-                    android:src="@drawable/twitter_logo"/>
+                    android:src="@drawable/twitter_logo" />
 
 
             </androidx.cardview.widget.CardView>
@@ -165,58 +165,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:paddingVertical="12dp"
             android:layout_marginTop="24dp"
-            app:cornerRadius="7dp"
+            android:fontFamily="@font/notosans_regular"
+            android:paddingVertical="12dp"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textSize="18sp"
-            android:fontFamily="@font/notosans_regular"
-            app:layout_constraintStart_toStartOf="parent"
+            app:cornerRadius="7dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_up_linear_layout2"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_linear_layout2" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
-            android:id="@+id/textView1"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="4dp"
-            android:fontFamily="@font/notosans_regular"
-            android:text= "@string/don_t_have_an_account"
-            android:textColor="@color/edu_black"
-            android:clickable="false"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/get_started_button"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="false"
+                android:fontFamily="@font/notosans_regular"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/edu_black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/get_started_button" />
 
 
-        <TextView
-            android:id="@+id/sign_up_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginStart="8dp"
-            android:fontFamily="@font/notosans_regular"
-            android:text="@string/sign_up"
-            android:textColor="@color/light_blue"
-            android:clickable="false"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/get_started_button"
-            app:layout_constraintLeft_toRightOf="@id/textView1" />
+            <TextView
+                android:id="@+id/sign_up_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:clickable="false"
+                android:fontFamily="@font/notosans_regular"
+                android:text="@string/sign_up"
+                android:textColor="@color/light_blue"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/get_started_button" />
 
 
-    </LinearLayout>
-
-
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

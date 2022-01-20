@@ -6,37 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ps.room.easyedu.R
-import ps.room.easyedu.databinding.FragmentSplashScreenTwoBinding
+import ps.room.easyedu.databinding.FragmentForgotPasswordBinding
 
 
-class SplashScreenTwoFragment : SharedFragment() {
-
-    private lateinit var binding: FragmentSplashScreenTwoBinding
-
+class ForgotPasswordFragment : SharedFragment() {
+    private lateinit var binding: FragmentForgotPasswordBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentSplashScreenTwoBinding.inflate(inflater, container, false)
-
+        binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
 
         return binding.root
+
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.getStartedButton.setOnClickListener {
+        binding.resetPasswordButton.setOnClickListener {
             activityCast().changeActivityFragment(
-                SplashScreenTwoFragmentDirections.actionSplashScreenTwoFragmentToSignUpFragment())
+                ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToPasswordSentFragment())
         }
 
-        binding.alreadyHaveAnAccountButton.setOnClickListener {
+        binding.signUpTextView.setOnClickListener {
             activityCast().changeActivityFragment(
-                SplashScreenTwoFragmentDirections.actionSplashScreenTwoFragmentToSignInFragment())
+                ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToSignInFragment()
+            )
         }
     }
-
 
 
 }

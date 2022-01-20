@@ -31,9 +31,14 @@ class SignInFragment : SharedFragment() {
             activityCast().changeActivityFragment(SignInFragmentDirections.actionSignInFragmentToBaseFragment())
         }
 
+        binding.forgotPasswordTextView.setOnClickListener {
+            activityCast().changeActivityFragment(SignInFragmentDirections.actionSignInFragmentToForgotPasswordFragment())
+        }
+
         binding.signUpTextView.setOnClickListener {
             activityCast().changeActivityFragment(SignInFragmentDirections.actionSignInFragmentToSignUpFragment())
         }
+
     }
 
 

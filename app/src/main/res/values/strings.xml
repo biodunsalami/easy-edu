@@ -27,4 +27,18 @@
     <string name="course_image">Course Image</string>
     <string name="star_icon">Star Icon</string>
     <string name="most_popular">Most Popular</string>
+    <string name="my_courses">My Courses</string>
+    <string name="you_have_not_started_any_courses">You have not started any courses</string>
+    <string name="no_courses_yet_background_image">No courses yet background image</string>
+    <string name="browse_through_courses_and_enroll_start_learning_today">Browse through courses and enroll.\n Start learning today.</string>
+    <string name="browse_courses">Browse Courses</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="you_have_not_downloaded_any_courses">You have not downloaded \n any courses</string>
+    <string name="download_your_favourite_courses_and_learn_anywhere">download your favourite courses and learn \n anywhere and anytime - downloaded \n courses will show up here.</string>
+    <string name="reset_password_sent">Your reset password has been sent to \n your email. You can sign in and \n change the password.</string>
+    <string name="download_a_course">Download a Course</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="mail_sent_icon">Mail Sent Icon</string>
+    <string name="back_to_sign_in">Back to Sign in</string>
+    <string name="password_sent">Password Sent</string>
 </resources>

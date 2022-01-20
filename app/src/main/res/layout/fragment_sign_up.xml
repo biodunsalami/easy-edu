@@ -163,7 +163,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
+                android:layout_margin="8dp"
                 android:contentDescription="@string/google_icon"
                 android:src="@drawable/google_logo"/>
 
@@ -178,7 +178,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="13dp"
+                android:layout_margin="9dp"
                 android:contentDescription="@string/facebook_icon"
                 android:src="@drawable/facebook_logo"/>
 
@@ -193,7 +193,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="14dp"
+                android:layout_margin="10dp"
                 android:contentDescription="@string/twitter_icon"
                 android:src="@drawable/twitter_logo"/>
 
