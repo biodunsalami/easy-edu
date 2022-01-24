@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
         app:cardCornerRadius="7dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginVertical="12dp">
+        android:layout_margin="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/course_image_view"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:src="@drawable/robot_image"
+                android:layout_height="wrap_content"
                 android:contentDescription="@string/course_image"
+                app:srcCompat="@drawable/robot_image"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/course_title_text_view"
@@ -31,8 +30,8 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="4dp"
                 android:text="Robotics: Mechanics and Computation"
-                android:fontFamily="@font/notosans_medium"
-                android:textSize="20sp"
+                android:fontFamily="@font/notosans_bold"
+                android:textSize="14sp"
                 app:layout_constraintTop_toBottomOf="@+id/course_image_view"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
@@ -44,19 +43,18 @@
                 android:layout_marginHorizontal="4dp"
                 android:text="By Tolu Davies"
                 android:fontFamily="@font/notosans_regular"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 app:layout_constraintTop_toBottomOf="@+id/course_title_text_view"
                 app:layout_constraintStart_toStartOf="parent"/>
-
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="8dp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginHorizontal="4dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/progressbar">
+                app:layout_constraintBottom_toBottomOf="parent">
 
                 <ImageView
                     android:id="@+id/star_image_view"
@@ -79,19 +77,10 @@
 
 
 
-            <ProgressBar
-                android:id="@+id/progressbar"
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginBottom="18dp"
-                android:progressDrawable="@drawable/custom_progressbar_bg"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.cardview.widget.CardView>
 
