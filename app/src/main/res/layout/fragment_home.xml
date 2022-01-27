@@ -13,7 +13,8 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:visibility="gone"
+            android:visibility="visible"
+            android:id="@+id/home_constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,6 +105,7 @@
 
 
         <TextView
+            android:visibility="invisible"
             android:id="@+id/browse_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,6 +120,8 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:visibility="invisible"
+            android:id="@+id/courses_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

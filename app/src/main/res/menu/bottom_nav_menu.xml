@@ -11,8 +11,8 @@
         android:title="Home"/>
 
     <item
-        android:id="@+id/downloadsFragment"
+        android:id="@+id/settingsFragment"
         android:icon="@drawable/download_icon"
-        android:title="Download"/>
+        android:title="Settings"/>
 
 </menu>

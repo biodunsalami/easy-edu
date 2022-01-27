@@ -42,4 +42,5 @@
     <string name="back_to_sign_in">Back to Sign in</string>
     <string name="password_sent">Password Sent</string>
     <string name="browse">Browse</string>
+    <string name="settings">Settings</string>
 </resources>

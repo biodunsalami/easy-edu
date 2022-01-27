@@ -17,15 +17,15 @@
     </fragment>
 
     <fragment
-        android:id="@+id/downloadsFragment"
-        android:name="ps.room.easyedu.fragments.DownloadsFragment"
-        android:label="fragment_downloads"
-        tools:layout="@layout/fragment_downloads" >
+        android:id="@+id/settingsFragment"
+        android:name="ps.room.easyedu.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
         <action
-            android:id="@+id/action_downloadsFragment_to_homeFragment"
+            android:id="@+id/action_settingsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <action
-            android:id="@+id/action_downloadsFragment_to_browseFragment"
+            android:id="@+id/action_settingsFragment_to_browseFragment"
             app:destination="@id/browseFragment" />
     </fragment>
     <fragment
@@ -37,8 +37,8 @@
             android:id="@+id/action_homeFragment_to_browseFragment"
             app:destination="@id/browseFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_downloadsFragment"
-            app:destination="@id/downloadsFragment" />
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 
 
