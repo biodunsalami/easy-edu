@@ -30,9 +30,9 @@ class SettingsFragment : BaseFragment() {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.downloadCourseButton.setOnClickListener {
-            findNavController().navigate(R.id.action_settingsFragment_to_browseFragment)
-        }
+//        binding.downloadCourseButton.setOnClickListener {
+//            findNavController().navigate(R.id.action_settingsFragment_to_browseFragment)
+//        }
     }
 
 }

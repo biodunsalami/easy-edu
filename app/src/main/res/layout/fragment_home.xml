@@ -125,7 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            tools:listitem="@layout/item_courses_recycler"
+            tools:listitem="@layout/item_courses_enrolled_recycler"
             tools:itemCount="2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/browse_text_view"

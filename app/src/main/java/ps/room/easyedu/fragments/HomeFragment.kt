@@ -7,7 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 import ps.room.easyedu.R
+import ps.room.easyedu.adapers.CourseEnrolledAdapter
+import ps.room.easyedu.api.Api
+import ps.room.easyedu.api.Repository
+import ps.room.easyedu.api.models.Course
 import ps.room.easyedu.databinding.FragmentHomeBinding
 
 
@@ -15,6 +22,9 @@ class HomeFragment : BaseFragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
+    private lateinit var courseEnrolledAdapter : CourseEnrolledAdapter
+
+    private var repository = Repository(Api.apiService)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +34,10 @@ class HomeFragment : BaseFragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         swapViews(isCourseAdded)
+
+        MainScope().launch {
+            setUpAdapter(repository.getCourses())
+        }
 
         return binding.root
     }
@@ -45,6 +59,12 @@ class HomeFragment : BaseFragment() {
         binding.browseCoursesButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_browseFragment)
         }
+    }
+
+    private fun setUpAdapter(courses : List<Course>) = binding.coursesRecyclerView.apply {
+        courseEnrolledAdapter = CourseEnrolledAdapter(courses)
+        adapter = courseEnrolledAdapter
+        layoutManager = LinearLayoutManager(context)
     }
 
 

@@ -113,12 +113,12 @@
             app:layout_constraintTop_toBottomOf="@+id/courses_recycler_view"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <ListView
-            android:id="@+id/most_popular_list_view"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/most_popular_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
-            tools:listitem="@layout/item_most_popular_list_view"
+            tools:listitem="@layout/item_most_popular_recycler"
             app:layout_constraintTop_toBottomOf="@+id/most_popular_text_view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
