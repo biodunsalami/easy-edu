@@ -13,6 +13,8 @@ class CourseEnrolledAdapter (private val courses: List<Course>) :
         RecyclerView.ViewHolder(binding.root) {
             fun bindViews(course: Course){
                 //bind views here
+                binding.courseTitleTextView.text = course.title
+                binding.courseTutorTextView.text = course.visible_instructors
             }
     }
 
