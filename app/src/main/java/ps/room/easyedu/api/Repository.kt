@@ -7,10 +7,9 @@ class Repository(private val apiService: ApiService) {
 
     suspend fun getCourses () : ArrayList<Course>{
 
-        val clientId = "9jXy1gh7gcCzGxj43QC2eIe4Bh0oMiuCSWWdCBtb"
-        val clientSecret = "4QwoV4SQFbOt9sbuoxrS9Lw5cYrI71xPEEDi7cyN2stMi9zqC8pLtMGBQEy399sK6gVFLaSp1ZAaORuuwPLpfkzN1uCBcLDLp1hLHOqIkFPTSeAW32w3SvGOBGgN7Pqb"
+        val auth = "Basic OWpYeTFnaDdnY0N6R3hqNDNRQzJlSWU0Qmgwb01pdUNTV1dkQ0J0Yjo0UXdvVjRTUUZiT3Q5c2J1b3hyUzlMdzVjWXJJNzF4UEVFRGk3Y3lOMnN0TWk5enFDOHBMdE1HQlFFeTM5OXNLNmdWRkxhU3AxWkFhT1J1dXdQTHBma3pOMXVDQmNMRExwMWhMSE9xSWtGUFRTZUFXMzJ3M1N2R09CR2dON1BxYg=="
 
-        val apiCourseList = apiService.getCourse(clientId, clientSecret)
+        val apiCourseList = apiService.getCourse(auth)
 
         val courseList = ArrayList<Course>()
 
