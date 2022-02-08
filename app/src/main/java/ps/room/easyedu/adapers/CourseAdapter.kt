@@ -3,7 +3,7 @@ package ps.room.easyedu.adapers
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ps.room.easyedu.api.models.Course
+import ps.room.easyedu.api.models.course.Course
 import ps.room.easyedu.databinding.ItemCoursesListRecyclerBinding
 
 class CourseAdapter (private val courses: List<Course>) :
@@ -12,7 +12,8 @@ class CourseAdapter (private val courses: List<Course>) :
     inner class CourseViewHolder(private val binding: ItemCoursesListRecyclerBinding) :
         RecyclerView.ViewHolder(binding.root) {
             fun bindView(course: Course){
-                //bind views here
+                binding.courseTitleTextView.text = course.title.toString()
+                binding.courseTutorTextView.text = course.instructor_name.toString()
             }
     }
 

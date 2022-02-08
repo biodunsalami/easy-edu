@@ -3,7 +3,7 @@ package ps.room.easyedu.adapers
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ps.room.easyedu.api.models.Course
+import ps.room.easyedu.api.models.course.Course
 import ps.room.easyedu.databinding.ItemMostPopularRecyclerBinding
 
 class PopularCourseAdapter(private val courses: List<Course>):

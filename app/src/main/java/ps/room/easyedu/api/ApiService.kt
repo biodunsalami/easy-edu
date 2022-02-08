@@ -2,12 +2,12 @@ package ps.room.easyedu.api
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import ps.room.easyedu.api.models.Course
+//import ps.room.easyedu.api.models.Course
+import ps.room.easyedu.api.models.course.Course
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Header
-import retrofit2.http.Headers
 
 
 private val BASEURL = "https://www.udemy.com/api-2.0/"
@@ -16,7 +16,7 @@ private val BASEURL = "https://www.udemy.com/api-2.0/"
 interface ApiService {
 
     @GET("courses")
-    suspend fun getCourse(@Header("authorization") authorization: String): List<Course>
+    suspend fun getCourse(@Header("authorization") authorization: String): CourseResponse
 
     @GET("courses/{pk}")
     suspend fun getCourseDetails(): List<Course>

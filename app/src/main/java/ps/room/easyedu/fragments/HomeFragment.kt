@@ -1,11 +1,9 @@
 package ps.room.easyedu.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.MainScope
@@ -14,7 +12,7 @@ import ps.room.easyedu.R
 import ps.room.easyedu.adapers.CourseEnrolledAdapter
 import ps.room.easyedu.api.Api
 import ps.room.easyedu.api.Repository
-import ps.room.easyedu.api.models.Course
+import ps.room.easyedu.api.models.course.Course
 import ps.room.easyedu.databinding.FragmentHomeBinding
 
 

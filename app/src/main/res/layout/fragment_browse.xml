@@ -95,6 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginStart="14dp"
+            app:reverseLayout="true"
             app:layout_constraintTop_toBottomOf="@+id/courses_text_view"
             app:layout_constraintEnd_toEndOf="parent"
             tools:listitem="@layout/item_courses_list_recycler"
