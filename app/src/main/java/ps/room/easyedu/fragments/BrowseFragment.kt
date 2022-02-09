@@ -40,7 +40,7 @@ class BrowseFragment : BaseFragment() {
     }
 
     private fun setUpAdapter(course: List<Course>) {
-        courseAdapter = CourseAdapter(course)
+        courseAdapter = CourseAdapter(course, requireContext())
         binding.coursesRecyclerView.adapter = courseAdapter
         binding.coursesRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
     }

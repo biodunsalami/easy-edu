@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
-                android:text="By Tolu Davies"
+                android:text="@string/tutors_name"
                 android:fontFamily="@font/notosans_regular"
                 android:textSize="12sp"
                 app:layout_constraintTop_toBottomOf="@+id/course_title_text_view"
