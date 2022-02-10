@@ -60,7 +60,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setUpAdapter(courses : List<Course>) = binding.coursesRecyclerView.apply {
-        courseEnrolledAdapter = CourseEnrolledAdapter(courses)
+        courseEnrolledAdapter = CourseEnrolledAdapter(courses, requireContext())
         adapter = courseEnrolledAdapter
         layoutManager = LinearLayoutManager(context)
     }

@@ -1,15 +1,17 @@
 package ps.room.easyedu.api
 
 import android.util.Log
+import ps.room.easyedu.api.models.CourseCategory
 //import ps.room.easyedu.api.models.Course
 import ps.room.easyedu.api.models.course.Course
 
-class     Repository(private val apiService: ApiService) {
+class Repository(private val apiService: ApiService) {
+
+    private lateinit var categoryData: CategoryData
 
     suspend fun getCourses () : ArrayList<Course>{
 
-        val auth = ""
-
+        val auth = "
         val apiCourseList = apiService.getCourse(auth).courseResponse
 
         val courseList = ArrayList<Course>()
@@ -47,6 +49,11 @@ class     Repository(private val apiService: ApiService) {
         Log.e("Course", courseList.toString())
 
         return courseList
+    }
+
+     suspend fun getCourseCategories() : ArrayList<CourseCategory> {
+        categoryData = CategoryData()
+        return categoryData.categoriesArrayList
     }
 
 }

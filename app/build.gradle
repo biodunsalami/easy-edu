@@ -57,7 +57,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     //Coil Library dependency
-    implementation("io.coil-kt:coil:1.2.1")
+    implementation("io.coil-kt:coil:1.4.0")
 
     //Retrofit dependency
     implementation "com.squareup.retrofit2:retrofit:2.9.0"

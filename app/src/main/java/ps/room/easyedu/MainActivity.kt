@@ -28,6 +28,4 @@ class MainActivity : AppCompatActivity() {
         navController.navigate(direction)
     }
 
-
-
 }
