@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import ps.room.easyedu.R
 import ps.room.easyedu.adapers.CategoriesAdapter
 import ps.room.easyedu.adapers.CourseAdapter
+import ps.room.easyedu.adapers.CourseInfoInterface
 import ps.room.easyedu.adapers.PopularCourseAdapter
 import ps.room.easyedu.api.Api
 import ps.room.easyedu.api.Repository
@@ -20,7 +22,7 @@ import ps.room.easyedu.api.models.course.Course
 import ps.room.easyedu.databinding.FragmentBrowseBinding
 
 
-class BrowseFragment : BaseFragment() {
+class BrowseFragment : BaseFragment(), CourseInfoInterface {
 
     private lateinit var binding: FragmentBrowseBinding
 
@@ -46,8 +48,9 @@ class BrowseFragment : BaseFragment() {
         return binding.root
     }
 
+
     private fun setUpCourseAdapter(course: List<Course>) {
-        courseAdapter = CourseAdapter(course, requireContext())
+        courseAdapter = CourseAdapter(course, requireContext(), this@BrowseFragment)
         binding.coursesRecyclerView.adapter = courseAdapter
         binding.coursesRecyclerView.layoutManager = LinearLayoutManager(
             context, LinearLayoutManager.HORIZONTAL, false)
@@ -56,7 +59,7 @@ class BrowseFragment : BaseFragment() {
     private fun setUpPopularCourseAdapter(course: List<Course>) =
         binding.mostPopularRecyclerView.apply{
 
-        popularCourseAdapter = PopularCourseAdapter(course, requireContext())
+        popularCourseAdapter = PopularCourseAdapter(course, requireContext(), this@BrowseFragment)
         adapter = popularCourseAdapter
         layoutManager = LinearLayoutManager(context)
     }
@@ -69,5 +72,10 @@ class BrowseFragment : BaseFragment() {
         layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
     }
 
+
+    override fun onCardClicked(position: Int) {
+        Toast.makeText(context, "This Works", Toast.LENGTH_SHORT).show()
+        activityCast().changeActivityFragment(BaseFragmentDirections.actionBaseFragmentToCourseFragment())
+    }
 
 }

@@ -3,7 +3,7 @@ package ps.room.easyedu.api
 import ps.room.easyedu.api.models.CourseCategory
 
 class CategoryData {
-    val categoriesArrayList = arrayOf(
+    val categoriesArrayList = arrayListOf<CourseCategory> (
         CourseCategory(1, "Business", "business" ),
         CourseCategory(2, "Design", "design" ),
         CourseCategory(3, "Development", "development" ),
@@ -19,4 +19,7 @@ class CategoryData {
         CourseCategory(13, "Teaching & Academics", "teaching-&-academics"),
         CourseCategory(14, "Udemy Free Resource Center", "udemy-free-resource-center"),
         CourseCategory(15, "Vodafone", "vodafone"))
+
+
+
 }

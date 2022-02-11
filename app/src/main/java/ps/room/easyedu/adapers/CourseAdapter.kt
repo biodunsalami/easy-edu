@@ -14,17 +14,23 @@ import ps.room.easyedu.api.models.course.Course
 import ps.room.easyedu.databinding.ItemCoursesListRecyclerBinding
 
 
-class CourseAdapter (private val courses: List<Course>, private val context: Context) :
+class CourseAdapter (private val courses: List<Course>,
+                     private val context: Context,
+                     private val courseInfoInterface: CourseInfoInterface) :
     RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
 
 
     inner class CourseViewHolder(private val binding: ItemCoursesListRecyclerBinding) :
         RecyclerView.ViewHolder(binding.root) {
-            fun bindView(course: Course){
+            fun bindView(course: Course, courseInfoInterface: CourseInfoInterface){
                 binding.courseTitleTextView.text = course.title.toString()
                 binding.courseTutorTextView.text = context.getString(R.string.tutors_name, course.visible_instructors[0].display_name.toString())
                 binding.courseCostTextView.text = if (course.is_paid) "paid" else "free"
                 binding.courseImageView.load(course.image_480x270)
+
+                binding.courseCardView.setOnClickListener {
+                    courseInfoInterface.onCardClicked(adapterPosition)
+                }
             }
     }
 
@@ -37,7 +43,7 @@ class CourseAdapter (private val courses: List<Course>, private val context: Con
 
     override fun onBindViewHolder(holder: CourseViewHolder, position: Int) {
         val course = courses[position]
-        holder.bindView(course)
+        holder.bindView(course, courseInfoInterface)
     }
 
     override fun getItemCount(): Int {

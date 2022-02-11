@@ -5,8 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/course_card_view"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         app:cardCornerRadius="7dp"
         android:backgroundTint="@color/cardview_light_background"
         android:layout_marginTop="10dp">
@@ -28,16 +29,17 @@
 
             <TextView
                 android:id="@+id/course_title_text_view"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:paddingEnd="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:text="Drone Photography"
-                android:fontFamily="@font/notosans_regular"
-                android:textSize="14sp"
+                android:fontFamily="@font/notosans_medium"
+                android:textSize="12sp"
                 android:textColor="@color/edu_black"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/popular_course_image_view"/>
 
 
@@ -49,7 +51,7 @@
                 android:layout_marginTop="2dp"
                 android:text="By Tolu Davies"
                 android:fontFamily="@font/notosans_regular"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:layout_constraintTop_toBottomOf="@+id/course_title_text_view"
                 app:layout_constraintStart_toEndOf="@+id/popular_course_image_view"/>
 

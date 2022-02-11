@@ -9,15 +9,21 @@ import ps.room.easyedu.R
 import ps.room.easyedu.api.models.course.Course
 import ps.room.easyedu.databinding.ItemMostPopularRecyclerBinding
 
-class PopularCourseAdapter(private val courses: List<Course>, private val context: Context):
+class PopularCourseAdapter(private val courses: List<Course>,
+                           private val context: Context,
+                           private val courseInfoInterface: CourseInfoInterface):
     RecyclerView.Adapter<PopularCourseAdapter.PopularCourseViewHolder>() {
 
     inner class PopularCourseViewHolder(private val binding: ItemMostPopularRecyclerBinding):
         RecyclerView.ViewHolder(binding.root) {
-            fun bindViews(course: Course){
+            fun bindViews(course: Course, courseInfoInterface: CourseInfoInterface){
                 binding.courseTitleTextView.text = course.title.toString()
                 binding.courseTutorTextView.text = context.getString(R.string.tutors_name, course.visible_instructors[0].display_name)
                 binding.popularCourseImageView.load(course.image_480x270)
+
+                binding.courseCardView.setOnClickListener {
+                    courseInfoInterface.onCardClicked(adapterPosition)
+                }
             }
     }
 
@@ -30,7 +36,7 @@ class PopularCourseAdapter(private val courses: List<Course>, private val contex
 
     override fun onBindViewHolder(holder: PopularCourseViewHolder, position: Int) {
         val course = courses[position]
-        holder.bindViews(course)
+        holder.bindViews(course, courseInfoInterface)
     }
 
     override fun getItemCount(): Int {
