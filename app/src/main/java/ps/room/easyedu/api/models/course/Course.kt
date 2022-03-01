@@ -1,5 +1,7 @@
 package ps.room.easyedu.api.models.course
 
+import java.io.Serializable
+
 data class Course(
     val _class: String?,
     val curriculum_items: List<Any>,
@@ -25,4 +27,4 @@ data class Course(
     val tracking_id: String?,
     val url: String?,
     val visible_instructors: List<VisibleInstructor>
-)
+) : Serializable

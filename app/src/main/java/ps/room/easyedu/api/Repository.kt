@@ -2,8 +2,8 @@ package ps.room.easyedu.api
 
 import android.util.Log
 import ps.room.easyedu.api.models.CourseCategory
-//import ps.room.easyedu.api.models.Course
 import ps.room.easyedu.api.models.course.Course
+import ps.room.easyedu.api.models.coursecurriculum.LectureItem
 
 class Repository(private val apiService: ApiService) {
 
@@ -11,7 +11,7 @@ class Repository(private val apiService: ApiService) {
 
     suspend fun getCourses () : ArrayList<Course>{
 
-        val auth = "Basic OWpYeTFnaDdnY0N6R3hqNDNRQzJlSWU0Qmgwb01pdUNTV1dkQ0J0Yjo0UXdvVjRTUUZiT3Q5c2J1b3hyUzlMdzVjWXJJNzF4UEVFRGk3Y3lOMnN0TWk5enFDOHBMdE1HQlFFeTM5OXNLNmdWRkxhU3AxWkFhT1J1dXdQTHBma3pOMXVDQmNMRExwMWhMSE9xSWtGUFRTZUFXMzJ3M1N2R09CR2dON1BxYg=="
+        val auth = ""
 
         val apiCourseList = apiService.getCourse(auth).courseResponse
 
@@ -47,7 +47,7 @@ class Repository(private val apiService: ApiService) {
 
             courseList.add(course)
         }
-        Log.e("Course", courseList.toString())
+//        Log.e("Course", courseList.toString())
 
         return courseList
     }
@@ -55,6 +55,46 @@ class Repository(private val apiService: ApiService) {
      suspend fun getCourseCategories() : ArrayList<CourseCategory> {
         categoryData = CategoryData()
         return categoryData.categoriesArrayList
+    }
+
+    suspend fun getCourseCurriculum() : ArrayList<LectureItem>{
+        val auth = ""
+
+        val courseList = getCourses()
+
+        val course_id = ""
+
+
+
+        val apiCourseCurriculumList = apiService.getCourseCurriculum(auth, course_id).courseCurriculumResponse
+
+        val courseLecturesList = ArrayList<LectureItem>()
+
+        for(lecture in apiCourseCurriculumList){
+            val lectures = LectureItem(lecture._class,
+                lecture.asset,
+                lecture.can_be_previewed,
+                lecture.created,
+                lecture.description,
+                lecture.duration,
+                lecture.id,
+                lecture.is_downloadable,
+                lecture.is_draft,
+                lecture.is_free,
+                lecture.is_published,
+                lecture.object_index,
+                lecture.pass_percent,
+                lecture.sort_order,
+                lecture.title,
+                lecture.title_cleaned,
+                lecture.transcript,
+                lecture.type,
+                lecture.version)
+
+            courseLecturesList.add(lectures)
+        }
+
+        return courseLecturesList
     }
 
 }

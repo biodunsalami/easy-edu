@@ -28,4 +28,9 @@ class MainActivity : AppCompatActivity() {
         navController.navigate(direction)
     }
 
+//    fun changeActivityFragment(direction: Int, bundle: Bundle?) {
+//        navController.navigate(direction, bundle)
+//    }
+
+
 }

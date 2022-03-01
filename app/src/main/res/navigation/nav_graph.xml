@@ -92,5 +92,12 @@
         android:id="@+id/courseFragment"
         android:name="ps.room.easyedu.fragments.CourseFragment"
         android:label="fragment_course"
-        tools:layout="@layout/fragment_course" />
+        tools:layout="@layout/fragment_course" >
+        <argument
+            android:name="course_data"
+            app:argType="ps.room.easyedu.api.models.course.Course"
+            app:nullable="true" />
+    </fragment>
+
+
 </navigation>

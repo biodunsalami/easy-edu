@@ -18,6 +18,10 @@ interface ApiService {
     @GET("courses")
     suspend fun getCourse(@Header("authorization") authorization: String): CourseResponse
 
+    @GET("{course_id}/public-curriculum-items/")
+    suspend fun getCourseCurriculum(@Header("authorization") authorization: String,
+                                    @Header("course_id") course_id: String) : CourseCurriculumResponse
+
     @GET("courses/{pk}")
     suspend fun getCourseDetails(): List<Course>
 
