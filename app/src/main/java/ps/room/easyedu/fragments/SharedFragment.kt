@@ -14,10 +14,7 @@ open class SharedFragment : Fragment() {
 
     companion object {
         @JvmField
-        val isCourseAdded = true
-
-        @JvmField
-        val isDownloadsPresent = true
+        val isCourseAdded = false
 
     }
 

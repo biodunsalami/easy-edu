@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        def nav_version = "2.4.0-alpha02"
+        def nav_version = "2.4.1"
 
         classpath "com.android.tools.build:gradle:7.0.4"
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
